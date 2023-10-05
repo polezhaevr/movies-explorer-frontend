@@ -1,10 +1,10 @@
 import React from "react";
 
 
-function Header(props) {
+function Header() {
   return (
     <header className="header">
-        <h1>Hello World</h1>
+        
     </header>
   );
 }
