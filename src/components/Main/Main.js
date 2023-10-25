@@ -1,5 +1,5 @@
 import React from "react";
-import  Promo  from '../Main/Promo/Promo.js';
+import Promo from '../Main/Promo/Promo.js';
 import Header from '../Header/Header.js';
 import AboutProject from '../Main/AboutProject/AboutProject.js'
 import Techs from '../Main/Techs/Techs.js'
@@ -10,17 +10,15 @@ import Footer from '../../components/Footer/Footer.js'
 function Main() {
     return (
         <>
-
+            <Header />
             <main>
-                <Header/>
                 <Promo />
-                <AboutProject/>
-                <Techs/>
-                <AboutMe/>
-                <Portfolio/>
-                <Footer/>
+                <AboutProject />
+                <Techs />
+                <AboutMe />
+                <Portfolio />
             </main>
-
+            <Footer />
         </>
     )
 }

@@ -27,12 +27,12 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
+    padding-top: 66px;
 }
 
 .about-me__item {
     display: flex;
     flex-direction: column;
-    padding-top: 66px;
 }
 
 .about-me__tittle-name {
@@ -61,7 +61,6 @@
     margin: 0;
     font-family: Inter, Arial, sans-serif;
     color: #FFF;
-    font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -82,17 +81,100 @@
     text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
 .about-me__img {
     width: 270px;
     height: 327px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+
+@media screen and (max-width: 940px) {
+    .about-me {
+        padding-top: 90px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 91px;
+    }
+
+    .about-me__tittle-name {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.6px;
+    }
+
+    .about-me__who-text {
+        font-size: 12px;
+        line-height: 18px;
+        padding-top: 16px;
+    }
+
+    .about-me__text-description {
+        font-size: 12px;
+        line-height: 18px;
+        padding-top: 20px;
+        width: 364px;
+    }
+
+    .about-me__img {
+        width: 255px;
+        height: 307px;
+        
+    }
+}
+
+@media screen and (max-width: 755px) {
+    .about-me__list {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .about-me__item:last-child {
+        order: -1;
+    }
+
+    .about-me__tittle-name {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .about-me {
+        padding-top: 70px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 70px;
+    }
+    .about-me__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me__img {
+        width: 292px;
+        height: 352px;
+    }
+
+    .about-me__tittle-name {
+        font-size: 30px;
+        line-height: normal;
+        letter-spacing: -1.2px;
+    }
+
+    .about-me__who-text {
+        font-size: 11px;
+        line-height: 16px;
+        padding-top: 20px;
+    }
+
+    .about-me__text-description {
+        font-size: 11px;
+        line-height: 16px;
+        padding-top: 20px;
+        width: 292px;
+    }
+
+    .about-me__link {
+        padding-top: 40px;
+    }
 }

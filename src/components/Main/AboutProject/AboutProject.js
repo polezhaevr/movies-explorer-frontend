@@ -4,7 +4,7 @@ import React from "react";
 function AboutProject() {
     return (
         <section className="about-project">
-            <div className="about-priject__title-container">=
+            <div className="about-priject__title-container">
                 <h2 className="about-project__about-tittle">
                     О проекте
                 </h2>
@@ -15,7 +15,7 @@ function AboutProject() {
                     <h3 className="about-project__list-tittle">Дипломный проект включал 5 этапов</h3>
                     <p className="about-project__list-text">Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.</p>
                 </li>
-                <li>
+                <li className="about-project__list-item">
                     <h3 className="about-project__list-tittle">На выполнение диплома ушло 5 недель</h3>
                     <p className="about-project__list-text">У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.</p>
                 </li>

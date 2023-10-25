@@ -3,6 +3,9 @@
     padding-left: 70px;
     padding-right: 70px;
     padding-bottom: 18px;
+}
+
+.header_background-blue {
     background-color: #073042;
 }
 
@@ -49,6 +52,10 @@
     padding-left: 11px;
 }
 
+.header__item-link_active {
+    font-weight: 500;
+}
+
 .header__item-text {
     margin: 0;
     color: #FFF;
@@ -74,10 +81,87 @@
     line-height: 16px;
 }
 
-.eader__item-logo {
-    align-self: ;
-}
-
 .header__item-link_logo {
     padding-left: 0;
+}
+
+.header__item:nth-child(5) {
+    display: none;
+}
+
+.header__btn-burger {
+    position: relative;
+    width: 28px;
+    height: 23px;
+    background-color: #202020;
+    border: none;
+    cursor: pointer;
+    background-image: url(../../images/burger.svg);
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.header__btn-burger_blue {
+    background-color: #073042;
+}
+
+@media screen and (max-width: 940px) {
+    .header {
+        padding-top: 18px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 18px;
+    }
+
+    .header__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .header__item-link {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+    .header__item:nth-child(2),
+    .header__item:nth-child(3) {
+        display: none;
+    }
+    .header__item:nth-child(5) {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .header {
+        padding-top: 18px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 18px;
+    }
+
+    .header__item-link {
+        font-size: 10px;
+    }
+
+    .header__item-link_green-btn {
+        padding-top: 5px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 5px;
+        margin-left: 14px;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+    .header__btn-burger {
+        width: 22px;
+        height: 24px;
+        background-image: url(../../images/burger-phone.svg);
+    }
 }

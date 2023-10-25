@@ -13,11 +13,10 @@ function Portfolio() {
                     <a
                         className="portfolio__item-link"
                         href="https://github.com/polezhaevr"
-                        target="_blank"
                         rel="noreferrer"
                     >
                         <img src={link} alt="Иконка к ссылке для перехода на статичный сайт"
-                            class="footer__social-icon"></img>
+                            className="portfolio__link-ico"></img>
                     </a>
                 </li>
 
@@ -26,11 +25,10 @@ function Portfolio() {
                     <a
                         className="portfolio__item-link"
                         href="https://github.com/polezhaevr"
-                        target="_blank"
                         rel="noreferrer"
                     >
                         <img src={link} alt="Иконка к ссылке для перехода на адаптивный сайт"
-                            class="footer__social-icon"></img>
+                            className="portfolio__link-ico"></img>
                     </a>
                 </li>
 
@@ -39,11 +37,10 @@ function Portfolio() {
                     <a
                         className="portfolio__item-link"
                         href="https://github.com/polezhaevr"
-                        target="_blank"
                         rel="noreferrer"
                     >
                         <img src={link} alt="Иконка к ссылке для перехода на одностраничное приложение"
-                            class="footer__social-icon"></img>
+                            className="portfolio__link-ico"></img>
                     </a>
                 </li>
             </ul>

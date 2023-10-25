@@ -30,6 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 90px;
 }
 
 .tech__list-tittle {
@@ -42,7 +43,6 @@
     line-height: 58px;
     letter-spacing: -2px;
     margin: 0;
-    padding-top: 90px;
 }
 
 .tech__list-text {
@@ -75,8 +75,11 @@
     border-radius: 10px;
     background: #303030;
     margin-right: 10px;
-    
+}
 
+
+.tech__list-technologies-item:last-child {
+    margin-right: 0px;
 }
 
 .tech__list-technologies-tittle {
@@ -90,4 +93,86 @@
     letter-spacing: -0.56px;
     margin: 0;
     text-align: center;
+}
+
+@media screen and (max-width: 940px) {
+    .techs {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .tech__list {
+        padding-top: 80px;
+    }
+
+    .tech__list-text {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -0.48px;
+        max-width: 460px;
+        padding-top: 22px;
+    }
+
+    .tech__list-technologies {
+        padding-top: 83px;
+    }
+
+    .tech__list-technologies-tittle {
+        font-size: 12px;
+        letter-spacing: -0.48px;
+    }
+
+    .tech__list-technologies-item {
+        width: 84px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .techs {
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-color: #202020;
+    }
+
+    .techs__title-container {
+        padding-bottom: 28px;
+        border-bottom: 1px solid #000;
+    }
+
+    .techs__tittle {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+
+    .tech__list-tittle {
+        font-size: 30px;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -1.2px;
+    }
+    
+    .tech__list-text {
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: -0.44px;
+        max-width: 292px;
+        padding-top: 24px;
+    }
+
+    .tech__list-technologies {
+        width: 178px;
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 10px;
+        margin: 0 auto;
+    }
+
+    .tech__list-technologies-item {
+        margin-right: 0;
+    }
 }

@@ -47,7 +47,6 @@
     max-width: 550px;
     padding-top: 26px;
     color: #FFF;
-    font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -56,7 +55,6 @@
 
 .about-project__timetable-contaiter {
     padding-top: 110px;
-    
 }
 
 .about-project__list-timetable {
@@ -100,11 +98,97 @@
 }
 
 .about-project__list-timetable-time_grey {
-    color:rgba(139, 139, 139, 1);
+    color: rgba(139, 139, 139, 1);
 }
 
 .about-project__list-timetable-time_front {
     color: #FFF;
     margin: 0;
     text-align: center;
+}
+
+
+@media screen and (max-width: 940px) {
+    .about-project {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        margin: 0 auto;
+    }
+
+    .about-project__list-text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .about-project__timetable-contaiter {
+        padding-top: 93px;
+    }
+
+    .about-project__list-item:nth-child(2) {
+        padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .about-project {
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 70px;
+        padding-bottom: 60px;
+        margin: 0 auto;
+    }
+
+    .about-project__list {
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+        padding-top: 4px;
+        align-items: center;
+    }
+
+    .about-project__list-item {
+        padding-top: 56px;
+    }
+
+    .about-project__list-tittle {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: -0.72px;
+    }
+
+    .about-project__list-text {
+        padding-top: 16px;
+        max-width: 284px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .about-project__timetable-contaiter {
+        padding-top: 60px;
+    }
+
+    .about-project__list-timetable-time {
+        font-size: 11px;
+    }
+
+    .about-project__list-timetable-item_grey:nth-child(1),
+    .about-project__list-timetable-item_grey:nth-child(2) {
+        background: #202020;
+        padding-top: 10px;
+    }
+
+    .about-project__list-item:nth-child(2) {
+        padding-left: 0;
+    }
+
+    .about-project__list-timetable-item:nth-child(1) {
+        flex-basis: 35.3%;
+    }
+
+    .about-project__list-timetable-item:nth-child(2) {
+        flex-basis: 64.7%;
+    }
+
 }

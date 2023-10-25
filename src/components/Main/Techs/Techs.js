@@ -6,7 +6,7 @@ function Techs() {
         <section className="techs">
             <div className="techs__title-container">
                 <h2 className="techs__tittle">
-                    О проекте
+                   Технологии
                 </h2>
             </div>
 
