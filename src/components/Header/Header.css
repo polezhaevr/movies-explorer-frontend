@@ -85,6 +85,10 @@
     padding-left: 0;
 }
 
+.header__item_non-active {
+    display: none;
+}
+
 .header__item:nth-child(5) {
     display: none;
 }

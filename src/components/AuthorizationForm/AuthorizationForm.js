@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import logo from "../../images/logo.png"
+import logo from "../../images/logo.svg"
 
 function AuthorizationForm({ tittle, button, text, textLink, signLink }) {
     const location = useLocation();
@@ -9,12 +9,12 @@ function AuthorizationForm({ tittle, button, text, textLink, signLink }) {
             <NavLink to="/" className="authorization__link">
                 <img src={logo} alt="Логотип" className="authorization__logo" />
             </NavLink>
-            <h2 className="authorization-form__title">{tittle}</h2>
+            <h2 className="authorization__title">{tittle}</h2>
             <form className="authorization__form">
                 <label className={`authorization__label ${location.pathname === "/signin"
                     ? " authorization__label_none"
                     : ""
-                    }`} htmlFor="name">Имя</label>
+                    }`}>Имя</label>
                 <input
                     className={`authorization__input ${location.pathname === "/signin"
                         ? " authorization__input_none"
@@ -30,7 +30,7 @@ function AuthorizationForm({ tittle, button, text, textLink, signLink }) {
                     required
                 />
 
-                <label className="authorization__label" htmlFor="email">E-mail</label>
+                <label className="authorization__label">E-mail</label>
                 <input
                     className="authorization__input"
                     type="email"
@@ -43,7 +43,7 @@ function AuthorizationForm({ tittle, button, text, textLink, signLink }) {
                     pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,4}"
                 />
 
-                <label className="authorization__label" htmlFor="password">Пароль</label>
+                <label className="authorization__label">Пароль</label>
                 <input
                     className="authorization__input"
                     type="password"

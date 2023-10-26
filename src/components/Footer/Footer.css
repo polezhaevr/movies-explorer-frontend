@@ -50,6 +50,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 940px) {
@@ -94,7 +95,7 @@
         padding-top: 30px;
     }
 
-    .footer__ooter__item-text_grey-color {
+    .footer__item-text_grey-color {
         color: #8B8B8B;
     }
 }

@@ -13,6 +13,7 @@ function Portfolio() {
                     <a
                         className="portfolio__item-link"
                         href="https://github.com/polezhaevr"
+                        target = "_blank"
                         rel="noreferrer"
                     >
                         <img src={link} alt="Иконка к ссылке для перехода на статичный сайт"
@@ -25,6 +26,7 @@ function Portfolio() {
                     <a
                         className="portfolio__item-link"
                         href="https://github.com/polezhaevr"
+                        target = "_blank"
                         rel="noreferrer"
                     >
                         <img src={link} alt="Иконка к ссылке для перехода на адаптивный сайт"
@@ -37,6 +39,7 @@ function Portfolio() {
                     <a
                         className="portfolio__item-link"
                         href="https://github.com/polezhaevr"
+                        target = "_blank"
                         rel="noreferrer"
                     >
                         <img src={link} alt="Иконка к ссылке для перехода на одностраничное приложение"

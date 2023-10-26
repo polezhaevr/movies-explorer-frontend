@@ -3,19 +3,18 @@ import React from "react";
 
 function FilterCheckbox() {
     return (
-        <div className="checkbox__container">
-            <label className="checkbox__switch" for="shorts-film">
+        <div className="search__checkbox-container">
+            <label className="search__switch" for="shorts-film">
                 <input
-                className="checkbox__input"  
+                className="search__input"  
                 type="checkbox" 
                 id="shorts-film" 
                 name="shorts-film"
-                form="search-form"
                 />
-                <div class="checkbox__slider checkbox__slider_round"></div>
+                <span class="search__slider search__slider_round"></span>
             </label>
 
-            <label  htmlFor="short-films" className="checkbox__label-text">Короткометражки</label>
+            <label className="search__label-text">Короткометражки</label>
         </div>
     );
 }

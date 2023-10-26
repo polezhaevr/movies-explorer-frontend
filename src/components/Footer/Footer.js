@@ -10,7 +10,7 @@ function Footer() {
             </div>
             <ul className="footer__list">
                 <li className="footer__item">
-                    <p className="footer__item-text footer__ooter__item-text_grey-color">
+                    <p className="footer__item-text footer__item-text_grey-color">
                         &#169;2023
                     </p>
                 </li>

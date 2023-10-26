@@ -23,7 +23,7 @@
     margin: 0;
 }
 
-.tech__list {
+.techs__list {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@
     padding-top: 90px;
 }
 
-.tech__list-tittle {
+.techs__list-tittle {
     color: #FFF;
     text-align: center;
     font-family: Inter, Arial, sans-serif;
@@ -45,7 +45,7 @@
     margin: 0;
 }
 
-.tech__list-text {
+.techs__list-text {
     color: #FFF;
     text-align: center;
     font-family: Inter, Arial, sans-serif;
@@ -59,7 +59,7 @@
     padding-top: 26px;
 }
 
-.tech__list-technologies {
+.techs__list-technologies {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -68,7 +68,7 @@
     padding-top: 100px;
 }
 
-.tech__list-technologies-item {
+.techs__list-technologies-item {
     width: 90px;
     padding-top: 21px;
     padding-bottom: 22px;
@@ -78,11 +78,11 @@
 }
 
 
-.tech__list-technologies-item:last-child {
+.techs__list-technologies-item:last-child {
     margin-right: 0px;
 }
 
-.tech__list-technologies-tittle {
+.techs__list-technologies-tittle {
     color: #FFF;
     text-align: center;
     font-family: Inter, Arial, sans-serif;
@@ -103,11 +103,11 @@
         padding-bottom: 90px;
     }
 
-    .tech__list {
+    .techs__list {
         padding-top: 80px;
     }
 
-    .tech__list-text {
+    .techs__list-text {
         font-size: 12px;
         line-height: 18px;
         letter-spacing: -0.48px;
@@ -115,16 +115,16 @@
         padding-top: 22px;
     }
 
-    .tech__list-technologies {
+    .techs__list-technologies {
         padding-top: 83px;
     }
 
-    .tech__list-technologies-tittle {
+    .techs__list-technologies-tittle {
         font-size: 12px;
         letter-spacing: -0.48px;
     }
 
-    .tech__list-technologies-item {
+    .techs__list-technologies-item {
         width: 84px;
     }
 }
@@ -148,14 +148,14 @@
         letter-spacing: -0.72px;
     }
 
-    .tech__list-tittle {
+    .techs__list-tittle {
         font-size: 30px;
         font-style: normal;
         line-height: normal;
         letter-spacing: -1.2px;
     }
     
-    .tech__list-text {
+    .techs__list-text {
         font-size: 11px;
         line-height: 16px;
         letter-spacing: -0.44px;
@@ -163,7 +163,7 @@
         padding-top: 24px;
     }
 
-    .tech__list-technologies {
+    .techs__list-technologies {
         width: 178px;
         padding-top: 50px;
         display: grid;
@@ -172,7 +172,7 @@
         margin: 0 auto;
     }
 
-    .tech__list-technologies-item {
+    .techs__list-technologies-item {
         margin-right: 0;
     }
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import logo from "../../../src/images/logo-main.png"
+import logo from "../../../src/images/logo.svg"
 import { NavLink, useLocation } from 'react-router-dom';
 import Navigation from "../Navigation/Navigation";
 
@@ -61,7 +61,7 @@ function Header() {
           </NavLink>
         </li>
 
-        <li className="header__item">
+        <li className="header__item header__item_non-active">
           <NavLink className="header__item-link"
             to="/signup"
             rel="noreferrer">

@@ -4,7 +4,7 @@ import user from "../../../images/roman-main.jpg"
 
 function AboutMe() {
     return (
-        <section className="about-me">
+        <section id="aboutMe" className="about-me">
             <div className="about-me__title-container">
                 <h2 className="about-me__tittle">
                     Студент

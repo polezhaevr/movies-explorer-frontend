@@ -6,7 +6,7 @@
     padding-top: 70px;
 }
 
-.authorization-form__title {
+.authorization__title {
     font-family: Inter, Arial, sans-serif;
     margin: 0;
     padding-top: 40px;
@@ -84,6 +84,12 @@
     font-weight: 500;
     line-height: normal;
     border: none;
+    cursor: pointer;
+}
+
+.authorization__btn:hover {
+    opacity: 0.8;
+    background: #3456F3;
 }
 
 .authorization__btn_position {
@@ -128,7 +134,7 @@
         padding-top: 232px;
         padding-bottom: 232px;
     }
-    
+
 }
 
 @media screen and (max-width: 560px) {
@@ -145,8 +151,8 @@
         text-align: center;
         padding-top: 50px;
 
-    }  
-    
+    }
+
     .authorization__input {
         width: 245px;
         height: 46px;
@@ -168,7 +174,7 @@
         text-align: center;
         font-size: 12px;
     }
-    
+
     .authorization__link {
         text-align: center;
         font-size: 12px;

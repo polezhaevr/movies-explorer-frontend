@@ -41,6 +41,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background-image: url("../../../images/find-btn.svg");
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 940px) {
