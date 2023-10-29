@@ -18,7 +18,7 @@
     padding-left: 12px;
     margin-right: 12px;
     padding-bottom: 14px;
-    padding-top: 14px;
+    padding-top: 12px;
 }
 
 .movies__card-tittle {
@@ -82,6 +82,10 @@
     border: none;
 }
 
+.movies__card-btn_delete:hover {
+    opacity: 0.7;
+} 
+
 
 @media screen and (max-width: 1275px) {
     .movies__img {
@@ -89,7 +93,7 @@
     }
   }
   
-  @media screen and (min-width: 560px) {
+  @media screen and (max-width: 560px) {
     .movies__img {
         height: 168px;
     }

@@ -7,10 +7,12 @@ import Footer from "../Footer/Footer.js"
 function Movies() {
     return (
         <>
+        <main>
         <Header/>
         <SearchForm/>
         <MoviesCardList/>
         <Footer/>
+        </main>
         </>
     );
 }

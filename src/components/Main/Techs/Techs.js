@@ -4,18 +4,16 @@ import React from "react";
 function Techs() {
     return (
         <section className="techs">
-            <div className="techs__title-container">
-                <h2 className="techs__tittle">
-                   Технологии
-                </h2>
-            </div>
+            <h2 className="techs__tittle">
+                Технологии
+            </h2>
 
-            <ul className="techs__list">
-                <li className="techs__list-item">
+            <div className="techs__list">
+                <div className="techs__list-item">
                     <h3 className="techs__list-tittle">7 технологий</h3>
                     <p className="techs__list-text">На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
-                </li>
-            </ul>
+                </div>
+            </div>
 
 
             <ul className="techs__list-technologies">

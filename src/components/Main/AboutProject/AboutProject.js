@@ -4,11 +4,9 @@ import React from "react";
 function AboutProject() {
     return (
         <section className="about-project">
-            <div className="about-project__title-container">
-                <h2 className="about-project__about-tittle">
-                    О проекте
-                </h2>
-            </div>
+            <h2 className="about-project__about-tittle">
+                О проекте   
+            </h2>
 
             <ul className="about-project__list">
                 <li className="about-project__list-item">

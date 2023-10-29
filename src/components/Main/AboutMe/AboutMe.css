@@ -5,11 +5,6 @@
     padding-bottom: 100px;
 }
 
-.about-me__title-container {
-    border-bottom: 1px solid #DADADA;
-    padding-bottom: 23px;
-}
-
 .about-me__tittle {
     font-family: Inter, Arial, sans-serif;
     color: #FFF;
@@ -19,12 +14,11 @@
     line-height: normal;
     letter-spacing: -0.88px;
     margin: 0;
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 23px;
 }
 
 .about-me__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: space-between;
     padding-top: 66px;
@@ -79,7 +73,13 @@
     font-weight: 500;
     line-height: normal;
     text-decoration: none;
+    cursor: pointer;
 }
+
+.about-me__link:hover {
+    opacity: 0.7;
+}
+
 
 .about-me__img {
     width: 270px;
@@ -121,12 +121,17 @@
         height: 307px;
         
     }
+
+    .about-me__link {
+        padding-top: 90px;
+    }
 }
 
 @media screen and (max-width: 755px) {
     .about-me__list {
         flex-direction: column;
         padding-top: 60px;
+        align-items: center;
     }
 
     .about-me__item:last-child {

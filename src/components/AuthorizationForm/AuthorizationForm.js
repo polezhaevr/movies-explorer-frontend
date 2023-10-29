@@ -6,10 +6,10 @@ function AuthorizationForm({ tittle, button, text, textLink, signLink }) {
     const location = useLocation();
     return (
         <main className="authorization">
-            <NavLink to="/" className="authorization__link">
+            <NavLink to="/" className=" ">
                 <img src={logo} alt="Логотип" className="authorization__logo" />
             </NavLink>
-            <h2 className="authorization__title">{tittle}</h2>
+            <h1 className="authorization__title">{tittle}</h1>
             <form className="authorization__form">
                 <label className={`authorization__label ${location.pathname === "/signin"
                     ? " authorization__label_none"
@@ -45,7 +45,7 @@ function AuthorizationForm({ tittle, button, text, textLink, signLink }) {
 
                 <label className="authorization__label">Пароль</label>
                 <input
-                    className="authorization__input"
+                    className="authorization__input authorization__input_pass-red"
                     type="password"
                     name="password"
                     id="authorization-form__password"

@@ -70,6 +70,14 @@
     line-height: normal;
 }
 
+.authorization__input:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.authorization__input_pass-red {
+    color: #EE3465;
+}
+
 .authorization__btn {
     margin-top: 60px;
     max-width: 396px;
@@ -93,7 +101,7 @@
 }
 
 .authorization__btn_position {
-    margin-top: 179px;
+    margin-top: 170px;
 }
 
 .authorization__link-container {
@@ -145,6 +153,16 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
+    }
+
+    .authorization__title {
+        padding-top:45px;
+        text-align: center;
+    }
+
+    .authorization__form {
+        padding-top: 60px;
+    
     }
 
     .authorization-form__title {

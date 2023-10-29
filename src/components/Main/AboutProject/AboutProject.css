@@ -6,11 +6,6 @@
     margin: 0 auto;
 }
 
-.about-project__title-container {
-    border-bottom: 1px solid #DADADA;
-    padding-bottom: 23px;
-}
-
 .about-project__about-tittle {
     font-family: Inter, Arial, sans-serif;
     color: #FFF;
@@ -20,6 +15,9 @@
     line-height: normal;
     letter-spacing: -0.88px;
     margin: 0;
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 23px;
+
 }
 
 .about-project__list {
@@ -112,7 +110,7 @@
     .about-project {
         padding-left: 50px;
         padding-right: 50px;
-        padding-top: 90px;
+        padding-top: 80px;
         padding-bottom: 90px;
         margin: 0 auto;
     }

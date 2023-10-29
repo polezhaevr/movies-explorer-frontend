@@ -40,16 +40,24 @@
     background-position: center;
 }
 
+.header__item:nth-child(2) {
+   margin: 0 auto;
+   padding-left: 60px;
+}
+
 .header__item-link {
     text-decoration: none;
     color: #FFF;
-    text-align: right;
     font-family: Inter, Arial, sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
     padding-left: 11px;
+}
+
+.header__item-link:hover {
+    opacity: 0.7;
 }
 
 .header__item-link_active {
@@ -83,6 +91,10 @@
 
 .header__item-link_logo {
     padding-left: 0;
+}
+
+.header__item-link_logo:hover {
+    opacity: 0.7;
 }
 
 .header__item_non-active {
@@ -166,6 +178,7 @@
     .header__btn-burger {
         width: 22px;
         height: 24px;
+        margin-right: 10px;
         background-image: url(../../images/burger-phone.svg);
     }
 }
