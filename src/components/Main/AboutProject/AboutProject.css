@@ -138,6 +138,12 @@
         margin: 0 auto;
     }
 
+    .about-project__about-tittle {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+    
+
     .about-project__list {
         margin: 0px;
         padding: 0px;

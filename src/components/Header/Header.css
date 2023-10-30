@@ -29,6 +29,10 @@
     align-items: center;
 }
 
+.header__item-link_container_opacity-black {
+    background-color: #202020;
+}
+
 .header__item-avatar-profile-container {
     width: 26px;
     height: 26px;
@@ -40,9 +44,16 @@
     background-position: center;
 }
 
+.header__item-avatar-profile-container_background-black {
+    background: #313131;
+    background-image: url(../../images/icon-avatar-icon-main.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .header__item:nth-child(2) {
-   margin: 0 auto;
-   padding-left: 60px;
+    margin: 0 auto;
+    padding-left: 60px;
 }
 
 .header__item-link {
@@ -114,7 +125,7 @@
     cursor: pointer;
     background-image: url(../../images/burger.svg);
     background-repeat: no-repeat;
-    background-position: center;    
+    background-position: center;
 }
 
 .header__btn-burger_blue {
@@ -148,6 +159,7 @@
     .header__item:nth-child(3) {
         display: none;
     }
+
     .header__item:nth-child(5) {
         display: block;
     }

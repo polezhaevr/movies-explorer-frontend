@@ -53,11 +53,13 @@ function Header() {
         </li>
 
         <li className="header__item">
-          <NavLink className="header__item-link header__item-link_container"
+          <NavLink className={`header__item-link header__item-link_container${location.pathname === "/saved-movies" || 
+          location.pathname === "/movies" || location.pathname === "/profile" ? " header__item-link_container_opacity-black" : ""}`}
             to="/profile"
             rel="noreferrer">
             <p className="header__item-text">Аккаунт</p>
-            <div className="header__item-avatar-profile-container"></div>
+            <div className={`header__item-avatar-profile-container${location.pathname === "/saved-movies" || 
+          location.pathname === "/movies" || location.pathname === "/profile" ? " header__item-avatar-profile-container_background-black" : ""}`}></div>
           </NavLink>
         </li>
 
