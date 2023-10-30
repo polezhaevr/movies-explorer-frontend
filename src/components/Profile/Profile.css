@@ -1,0 +1,148 @@
+.profile {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__welcome-text {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.profile__form {
+    width: 410px;
+    margin: 0 auto;
+    padding-top: 115px;
+}
+
+.profile__form-wrapper {
+    border: 0;
+    padding-left: 0;
+}
+
+.profile__input-name-wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #424242;
+    padding-bottom: 16px;
+}
+
+.profile__input-label {
+    color: #FFF;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.profile__input {
+    background: #202020;
+    border: none;
+    color: #FFF;
+    text-align: right;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    outline: none;
+}
+
+.profile__input-email-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 17px;
+}
+
+.profile__btn-save {
+    width: 110px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #202020;
+    outline: none;
+    margin-top: 210px;
+    align-self: center;
+    border: none;
+    cursor: pointer;
+}
+
+.profile__btn-save:hover {
+    opacity: 0.7;
+} 
+
+.profile__logout {
+    color: #EE3465;
+    text-align: center;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    padding-top: 16px;
+    border: none;
+}
+
+.profile__logout:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 940px) {
+    .profile {
+        padding-top: 236px;
+        padding-bottom: 269px;
+    }
+
+    .profile__form {
+        padding-top: 88px;
+    }
+
+    .profile__btn-save {
+        margin-top: 195px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .profile {
+        max-width: 260px;
+        padding-top: 65px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 40px;
+    }
+
+    .profile__form-wrapper {
+        padding-right: 0;
+    }
+
+    .profile__form {
+        padding-top: 75px;
+        max-width: 260px;
+    }
+
+    .profile__btn-save {
+        max-width: 260px;
+        padding-top: 172px;
+        font-size: 12px;
+    }
+
+    .profile__logout {
+        font-size: 12px;
+    }
+
+}

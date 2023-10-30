@@ -1,0 +1,101 @@
+.movies__item {
+    background-color: #222222;
+    border-radius: 10px;
+    position: relative;
+    filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.05));
+}
+
+.movies__img {
+    width: 100%;
+    height: 151px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.movies__components-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12px;
+    margin-right: 12px;
+    padding-bottom: 14px;
+    padding-top: 12px;
+}
+
+.movies__card-tittle {
+    font-family: Inter, Arial, sans-serif;
+    color: #FFF;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px;
+}
+
+.movies__text-time {
+    font-family: Inter, Arial, sans-serif;
+    color: #8B8B8B;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.movies__card-btn {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #FFFF;
+    background-color: #313131;
+    border-radius: 50px;
+}
+
+.movies__card-btn:active {
+    background-color: #2BE080;
+}
+
+
+/* активное состояние кнопки при добавлении фильма*/
+/*.movies__card-btn_active {
+    background-color: #2BE080;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #FFFF;
+    border-radius: 50px;
+}
+*/
+
+.movies__card-btn_delete {
+    background-color: #222222;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../../images/delete-btn-movie.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+.movies__card-btn_delete:hover {
+    opacity: 0.7;
+} 
+
+
+@media screen and (max-width: 1275px) {
+    .movies__img {
+        height: 190px;
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    .movies__img {
+        height: 168px;
+    }
+  }
+

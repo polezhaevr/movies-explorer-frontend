@@ -1,0 +1,198 @@
+.about-project {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    margin: 0 auto;
+}
+
+.about-project__about-tittle {
+    font-family: Inter, Arial, sans-serif;
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.88px;
+    margin: 0;
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 23px;
+
+}
+
+.about-project__list {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+}
+
+.about-project__list-tittle {
+    margin: 0px;
+    color: #FFF;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+
+.about-project__list-text {
+    margin: 0px;
+    max-width: 550px;
+    padding-top: 26px;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.about-project__timetable-contaiter {
+    padding-top: 110px;
+}
+
+.about-project__list-timetable {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.about-project__list-timetable-item {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.about-project__list-timetable-item:nth-child(1) {
+    flex-basis: 20%;
+    background: #3DDC84;
+}
+
+.about-project__list-timetable-item:nth-child(2) {
+    flex-basis: 80%;
+    background: #303030;
+}
+
+.about-project__list-timetable-item_grey:nth-child(1),
+.about-project__list-timetable-item_grey:nth-child(2) {
+    background: #202020;
+    padding-top: 14px;
+}
+
+.about-project__list-timetable-time {
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    text-align: center;
+}
+
+.about-project__list-timetable-time_grey {
+    color: rgba(139, 139, 139, 1);
+}
+
+.about-project__list-timetable-time_front {
+    color: #FFF;
+    margin: 0;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 940px) {
+    .about-project {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 80px;
+        padding-bottom: 90px;
+        margin: 0 auto;
+    }
+
+    .about-project__list-text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .about-project__timetable-contaiter {
+        padding-top: 93px;
+    }
+
+    .about-project__list-item:nth-child(2) {
+        padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .about-project {
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 70px;
+        padding-bottom: 60px;
+        margin: 0 auto;
+    }
+
+    .about-project__about-tittle {
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+    
+
+    .about-project__list {
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+        padding-top: 4px;
+        align-items: center;
+    }
+
+    .about-project__list-item {
+        padding-top: 56px;
+    }
+
+    .about-project__list-tittle {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: -0.72px;
+    }
+
+    .about-project__list-text {
+        padding-top: 16px;
+        max-width: 284px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .about-project__timetable-contaiter {
+        padding-top: 60px;
+    }
+
+    .about-project__list-timetable-time {
+        font-size: 11px;
+    }
+
+    .about-project__list-timetable-item_grey:nth-child(1),
+    .about-project__list-timetable-item_grey:nth-child(2) {
+        background: #202020;
+        padding-top: 10px;
+    }
+
+    .about-project__list-item:nth-child(2) {
+        padding-left: 0;
+    }
+
+    .about-project__list-timetable-item:nth-child(1) {
+        flex-basis: 35.3%;
+    }
+
+    .about-project__list-timetable-item:nth-child(2) {
+        flex-basis: 64.7%;
+    }
+
+}
