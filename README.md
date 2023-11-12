@@ -5,6 +5,8 @@
 front - https://polezhaevr.front.movies.nomoredomainsrocks.ru/
 back - https://polezhaevr.bitfilmsdb.nomoredomainsrocks.ru/
 
+пул реквест - https://github.com/polezhaevr/movies-explorer-frontend/pull/2
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
