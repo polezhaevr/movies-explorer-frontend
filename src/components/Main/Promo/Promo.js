@@ -1,5 +1,4 @@
 import logo from "../../../images/big-landing-logo.png"
-import { Link } from "react-router-dom";
 
 function Promo() {
   return(

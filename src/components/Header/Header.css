@@ -51,10 +51,6 @@
     background-position: center;
 }
 
-.header__item:nth-child(2) {
-    margin: 0 auto;
-    padding-left: 60px;
-}
 
 .header__item-link {
     text-decoration: none;
@@ -108,13 +104,6 @@
     opacity: 0.7;
 }
 
-.header__item_non-active {
-    display: none;
-}
-
-.header__item:nth-child(5) {
-    display: none;
-}
 
 .header__btn-burger {
     position: relative;
@@ -153,11 +142,6 @@
         font-size: 12px;
         font-weight: 500;
         line-height: 16px;
-    }
-
-    .header__item:nth-child(2),
-    .header__item:nth-child(3) {
-        display: none;
     }
 
     .header__item:nth-child(5) {

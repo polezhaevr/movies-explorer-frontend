@@ -1,29 +1,42 @@
 import React from "react";
-import pic from "../../../images/example_pic.jpg";
 import { useLocation } from 'react-router-dom';
 
 
-function MoviesCard() {
+function MoviesCard( {movieInfo, onCardButtonClick, addedMovies}) {
     const location = useLocation();
+    const DurationHours = Math.floor(movieInfo.duration / 60);
+    const DurationMinutes = movieInfo.duration % 60;
+
+    function handleCardButtonClick() {
+        onCardButtonClick(movieInfo);
+      }
+
     return (
         <li className="movies__item">
             <img className="movies__img"
-                src={pic}
-                alt="Картинка карточки фильма"
+                src={location.pathname === "/movies" && movieInfo.image
+                ? 'https://api.nomoreparties.co' + movieInfo.image.url
+                : location.pathname === "/saved-movies"
+                  ? movieInfo.image
+                  : ''}
+                alt={`Постер фильма «${movieInfo.nameRU}»`}
             />
 
             <div className="movies__components-container">
                 <div className="movies__text-container">
-                    <h2 className="movies__card-tittle">33 слова о дизайне</h2>
-                    <p className="movies__text-time">1ч42м</p>
+                    <h2 className="movies__card-tittle">{movieInfo.nameRU}</h2>
+                    <p className="movies__text-time">{DurationHours > 0 && `${DurationHours}ч`}{DurationMinutes > 0 && ` ${DurationMinutes}м`}</p>
                 </div>
 
                 <button
                     className={`movies__card-btn${location.pathname === "/saved-movies"
                         ? " movies__card-btn_delete"
-                        : ""
+                        :addedMovies.some(item => item.movieId === movieInfo.id)
+                        ? " movies__card-btn_active "
+                        : " movies__card-btn_active_none"
                         }`}
                     type="button"
+                    onClick={handleCardButtonClick}
 
                 />
             </div>

@@ -1,15 +1,17 @@
 import React from "react";
 import AuthorizationForm from "../AuthorizationForm/AuthorizationForm.js";
 
-function Register() {
+function Register({submitHandler}) {
     return (
         <>
             <AuthorizationForm
-                  tittle="Добро пожаловать!"
-                  button="Зарегистрироваться"
-                  text = "Уже зарегистрированы?"
-                  textLink= "Войти"
-                  signLink="/signin"
+                name="register"
+                tittle="Добро пожаловать!"
+                button="Зарегистрироваться"
+                text="Уже зарегистрированы?"
+                textLink="Войти"
+                signLink="/signin"
+                submitHandler={submitHandler}
             />
         </>
     );

@@ -79,6 +79,7 @@
 }
 
 .authorization__btn {
+    font-family: Inter, Arial, sans-serif;
     margin-top: 60px;
     max-width: 396px;
     width: 100%;
@@ -97,7 +98,10 @@
 
 .authorization__btn:hover {
     opacity: 0.8;
-    background: #3456F3;
+}
+
+.authorization__btn:disabled {
+    opacity: 0.7;
 }
 
 .authorization__btn_position {
@@ -137,6 +141,16 @@
     opacity: 0.7;
 }
 
+.authorization__input-message-error {
+    color: #EE3465;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 10px;
+    text-align: left;
+}
 
 @media screen and (max-width: 940px) {
     .authorization {
@@ -157,13 +171,13 @@
     }
 
     .authorization__title {
-        padding-top:45px;
+        padding-top: 45px;
         text-align: center;
     }
 
     .authorization__form {
         padding-top: 60px;
-    
+
     }
 
     .authorization-form__title {
@@ -197,5 +211,9 @@
     .authorization__link {
         text-align: center;
         font-size: 12px;
+    }
+
+    .authorization__input-message-error {
+        max-width:250px;
     }
 }

@@ -55,7 +55,11 @@
     border-radius: 50px;
 }
 
-.movies__card-btn:active {
+.movies__card-btn_active_none {
+    background-color: #313131;
+} 
+
+.movies__card-btn_active {
     background-color: #2BE080;
 }
 
