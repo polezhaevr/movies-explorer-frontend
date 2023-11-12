@@ -98,6 +98,7 @@ function App() {
   function handleLogout() {
     localStorage.clear();
     setIsLoggedIn(false);
+    window.location.reload();
   }
 
   function handleProfileFormSubmit(inputValues) {
