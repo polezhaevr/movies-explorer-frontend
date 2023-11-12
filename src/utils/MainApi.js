@@ -1,4 +1,4 @@
-const BACKEND_BITFILMSDB_URL_API = 'http://localhost:3000';
+const BACKEND_BITFILMSDB_URL_API = 'https://polezhaevr.bitfilmsdb.nomoredomainsrocks.ru';
 
 function setRequest(urlPath, requestMethod) {
   return fetch(`${BACKEND_BITFILMSDB_URL_API}${urlPath}`, {
@@ -32,7 +32,7 @@ function verificationToken(token) {
 }
 
 function registration({ name, email, password }) {
-  return fetch(`${'http://localhost:3000'}/signup`, {
+  return fetch(`${BACKEND_BITFILMSDB_URL_API}/signup`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
