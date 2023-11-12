@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function MoviesCard( {movieInfo, onCardButtonClick, addedMovies}) {
@@ -9,10 +10,14 @@ function MoviesCard( {movieInfo, onCardButtonClick, addedMovies}) {
 
     function handleCardButtonClick() {
         onCardButtonClick(movieInfo);
+        console.log(movieInfo.trailerLink)
       }
+
+      
 
     return (
         <li className="movies__item">
+            <Link className="movies__trailer-link" to={movieInfo.trailerLink} target="_blank">
             <img className="movies__img"
                 src={location.pathname === "/movies" && movieInfo.image
                 ? 'https://api.nomoreparties.co' + movieInfo.image.url
@@ -21,7 +26,7 @@ function MoviesCard( {movieInfo, onCardButtonClick, addedMovies}) {
                   : ''}
                 alt={`Постер фильма «${movieInfo.nameRU}»`}
             />
-
+            </Link>
             <div className="movies__components-container">
                 <div className="movies__text-container">
                     <h2 className="movies__card-tittle">{movieInfo.nameRU}</h2>
