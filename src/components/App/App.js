@@ -57,29 +57,18 @@ function App() {
 
   function handleRegister(values) {
     MainApi.registration(values)
-      .then((res) => {
-        if (res.ok) {
+      .then(() => {
           handleLogin({ email: values.email, password: values.password });
-        } else if (res.status === 400) {
-          console.error('400: некорректно заполнено одно из полей');
-        }
       })
       .catch(console.error);
   }
 
   function handleLogin(values) {
     MainApi.authorization(values)
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        return res.json().then(res => { throw new Error(res.error) })
-      })
       .then(data => {
         if (data['token']) {
           localStorage.setItem('token', data['token']);
           setIsLoggedIn(true);
-
           if (addedMovies.length === 0) {
             MainApi.getSavedMovies()
               .then((res) => {

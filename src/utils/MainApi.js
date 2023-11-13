@@ -1,5 +1,13 @@
 const BACKEND_BITFILMSDB_URL_API = 'https://polezhaevr.bitfilmsdb.nomoredomainsrocks.ru';
 
+
+function _checkResponse(res) {
+  if (res.ok) {
+    return res.json();
+  }
+  return Promise.reject(`Ошибка: ${res.status}`);
+}
+
 function setRequest(urlPath, requestMethod) {
   return fetch(`${BACKEND_BITFILMSDB_URL_API}${urlPath}`, {
     method: requestMethod,
@@ -38,7 +46,8 @@ function registration({ name, email, password }) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ name, email, password })
-  })
+  }).then(_checkResponse);
+
 }
 
 function authorization({ email, password }) {
@@ -48,7 +57,7 @@ function authorization({ email, password }) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ email, password })
-  })
+  }).then(_checkResponse);
 }
 
 function getRequest(urlPath) {

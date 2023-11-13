@@ -10,9 +10,9 @@ function AuthorizationForm({ name, tittle, button, text, textLink, signLink, sub
 
 
     function handleSubmit(event) {
-        event.preventDefault();
-        setErrorMessageShow('Что то пошло не так ... (');
-        submitHandler(values);
+        event.preventDefault(); 
+        setErrorMessageShow(true);
+        submitHandler(values)
     }
 
     return (
@@ -76,8 +76,11 @@ function AuthorizationForm({ name, tittle, button, text, textLink, signLink, sub
                     required
                     onChange={handleChange}
                 />
-                <span className="authorization__input-message-error">{errors.password}{errorMessage}</span>
+                <span className="authorization__input-message-error">{errors.password}</span>
 
+                {errorMessage &&
+                    <span className="authorization__input-message-error">Что то пошло не так ...</span>
+                }
                 <button
                     className={`authorization__btn  ${location.pathname === "/signin"
                         ? " authorization__btn_position"
