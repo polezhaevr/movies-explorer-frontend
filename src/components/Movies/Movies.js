@@ -3,29 +3,28 @@ import SearchForm from "./SearchForm/SearchForm.js";
 import MoviesCardList from "./MoviesCardList/MoviesCardList.js";
 import Header from "../Header/Header.js"
 import Footer from "../Footer/Footer.js"
-import  Preloader from '../Preloader/Preloader.js';
+import Preloader from '../Preloader/Preloader.js';
 import * as MoviesApi from '../../utils/MoviesApi';
+import { STORAGE_RAW_MOVIES } from '../../utils/constants';
 
-
-function Movies({ isLoggedIn, searchQuery, isShortFilm, onSearchFormSubmit, onShortFilmCheckboxChange, filterMovies, onCardButtonClick, addedMovies}) {
+function Movies({ isLoggedIn, searchQuery, isShortFilm, onSearchFormSubmit, onShortFilmCheckboxChange, filterMovies, onCardButtonClick, addedMovies }) {
     const [rawMovies, setRawMovies] = React.useState(JSON.parse(localStorage.getItem('rawMovies')) || []);
 
     React.useEffect(() => {
         if (rawMovies.length === 0) {
-          MoviesApi.getMovieList()
-            .then((res) => {
-              setRawMovies(res);
-              localStorage.setItem('rawMovies', JSON.stringify(res));
-            })
-            .catch(console.error);
+            MoviesApi.getMovieList()
+                .then((res) => {
+                    setRawMovies(res);
+                    localStorage.setItem(STORAGE_RAW_MOVIES , JSON.stringify(res));
+                })
+                .catch(console.error);
         }
-      },);
-
+    },);
 
     return (
         <>
             <main>
-                <Header   isLoggedIn={isLoggedIn}/>
+                <Header isLoggedIn={isLoggedIn} />
                 <SearchForm
                     searchQuery={searchQuery}
                     isShortFilm={isShortFilm}
@@ -38,7 +37,7 @@ function Movies({ isLoggedIn, searchQuery, isShortFilm, onSearchFormSubmit, onSh
                         onCardButtonClick={onCardButtonClick}
                         addedMovies={addedMovies}
                     />
-                    : <Preloader/>}
+                    : <Preloader />}
                 <Footer />
             </main>
         </>

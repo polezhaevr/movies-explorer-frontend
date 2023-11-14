@@ -1,10 +1,20 @@
 import React from "react";
 import MoviesCard from "../MoviesCard/MoviesCard.js"
 import { useLocation } from 'react-router-dom';
+import {
+    PC_WIDTH,
+    TABLET_WIDTH,
+    PC_CARD,
+    TABLET_CARD,
+    MOBILE_CARD,
+    PC_COUNT_CARD_MORE,
+    TABLET_COUNT_CARD,
+    MOBILE_COUNT_CARD
+} from "../../../utils/constants.js"
 
 
 function MoviesCardList({ movies, onCardButtonClick, addedMovies }) {
-    const [cardToView, setCardToView] = React.useState(8);
+    const [cardToView, setCardToView] = React.useState(16);
     const location = useLocation();
 
     React.useEffect(() => {
@@ -15,27 +25,23 @@ function MoviesCardList({ movies, onCardButtonClick, addedMovies }) {
         }
     }, [])
 
-    React.useEffect(() => {
-        handleResize();
-    }, [movies])
-
     function handleResize() {
-        if (window.innerWidth > 1280) {
-            setCardToView(12);
-        } else if (window.innerWidth > 768) {
-            setCardToView(8);
+        if (window.innerWidth > PC_WIDTH) {
+            setCardToView(PC_CARD);
+        } else if (window.innerWidth > TABLET_WIDTH) {
+            setCardToView(TABLET_CARD);
         } else {
-            setCardToView(5);
+            setCardToView(MOBILE_CARD);
         }
     }
 
-    function handleMoreButtonClick() {
-        if (window.innerWidth > 1280) {
-            setCardToView(prevCardToView => prevCardToView + 4);
-        } else if (window.innerWidth > 768) {
-            setCardToView(prevCardToView => prevCardToView + 2);
+    function handleMoreButtonClick() { 
+        if (window.innerWidth > PC_WIDTH) {
+            setCardToView(prevCardToView => prevCardToView + PC_COUNT_CARD_MORE);
+        } else if (window.innerWidth > TABLET_WIDTH) {
+            setCardToView(prevCardToView => prevCardToView + TABLET_COUNT_CARD);
         } else {
-            setCardToView(prevCardToView => prevCardToView + 2);
+            setCardToView(prevCardToView => prevCardToView + MOBILE_COUNT_CARD);
         }
     }
 

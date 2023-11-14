@@ -3,6 +3,7 @@ import Header from "../Header/Header.js";
 import Footer from "../Footer/Footer.js";
 import SearchForm from "../Movies/SearchForm/SearchForm.js";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList.js";
+import { MOVIE_TIMING } from '../../utils/constants';
 
 function SavedMovies({ isLoggedIn, onCardButtonClick, addedMovies }) {
   const [searchQuery, setSearchQuery] = React.useState('');
@@ -14,7 +15,6 @@ function SavedMovies({ isLoggedIn, onCardButtonClick, addedMovies }) {
 
   function handleShortFilmCheckboxChangeOnSaved(event) {
     const checkedState = event.target.checked;
-
     setIsShortFilm(checkedState);
   }
 
@@ -24,7 +24,7 @@ function SavedMovies({ isLoggedIn, onCardButtonClick, addedMovies }) {
         item.nameRU.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.nameEN.toLowerCase().includes(searchQuery.toLowerCase());
 
-      return isShortFilm ? item.duration <= 40 && includesQuery : includesQuery;
+      return isShortFilm ? item.duration <= MOVIE_TIMING && includesQuery : includesQuery;
     });
   }
 

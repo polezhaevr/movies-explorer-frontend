@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import logo from "../../images/logo.svg"
 import { useFormWithValidation } from '../../hooks/editValidationForm';
@@ -8,11 +8,12 @@ function AuthorizationForm({ name, tittle, button, text, textLink, signLink, sub
     const [errorMessage, setErrorMessageShow] = React.useState('');
     const location = useLocation();
 
-
     function handleSubmit(event) {
-        event.preventDefault(); 
-        setErrorMessageShow(true);
+        event.preventDefault();
         submitHandler(values)
+            .catch(() => {
+                setErrorMessageShow(true);
+            })
     }
 
     return (
@@ -21,7 +22,7 @@ function AuthorizationForm({ name, tittle, button, text, textLink, signLink, sub
                 <img src={logo} alt="Логотип" className="authorization__logo" />
             </NavLink>
             <h1 className="authorization__title">{tittle}</h1>
-            <form className="authorization__form" onSubmit={handleSubmit} name={`${name}-form`} onChange={handleChange}>
+            <form className="authorization__form" name={`${name}-form`} onChange={handleChange}>
                 {location.pathname === "/signup" ?
                     <>
                         <label className={`authorization__label ${location.pathname === "/signin"
@@ -87,6 +88,7 @@ function AuthorizationForm({ name, tittle, button, text, textLink, signLink, sub
                         : ""
                         }`}
                     type="submit"
+                    onClick={handleSubmit}
                     disabled={!isValid}
                 >{button}</button>
 

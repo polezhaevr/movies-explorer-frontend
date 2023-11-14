@@ -10,14 +10,20 @@ import NotFound from "../NotFound/NotFound.js";
 import SavedMovies from "../SavedMovies/SavedMovies.js";
 import Login from "../Login/Login.js";
 import * as MainApi from '../../utils/MainApi';
+import {
+  MOVIE_TIMING,
+  STORAGE_SAVED_MOVIES,
+  STORAGE_SEARCH_QUERY,
+  STORAGE_IS_SHORT_FILM
+} from '../../utils/constants';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(!!localStorage.getItem('token'));
   const [currentUser, setCurrentUser] = React.useState({});
-  const [addedMovies, setSavedMovies] = React.useState(JSON.parse(localStorage.getItem('savedMovies')) || []);
-  const [searchQuery, setSearchQuery] = React.useState(localStorage.getItem('searchQuery') || '');
+  const [addedMovies, setSavedMovies] = React.useState(JSON.parse(localStorage.getItem(STORAGE_SAVED_MOVIES)) || []);
+  const [searchQuery, setSearchQuery] = React.useState(localStorage.getItem(STORAGE_SEARCH_QUERY) || '');
   const [isShortFilm, setIsShortFilm] = React.useState(
-    JSON.parse(localStorage.getItem('isShort')) || false
+    JSON.parse(localStorage.getItem(STORAGE_IS_SHORT_FILM)) || false
   );
   const navigate = useNavigate();
   const location = useLocation();
@@ -51,20 +57,24 @@ function App() {
         .catch(() => {
           setIsLoggedIn(false);
           localStorage.removeItem('token');
+          console.error('Ошибка токена');
         })
     }
-  },[])
+  }, [])
 
-  function handleRegister(values) {
-    MainApi.registration(values)
+  function handleRegister(values, messageFalse) {
+    return MainApi.registration(values)
       .then(() => {
-          handleLogin({ email: values.email, password: values.password });
+        handleLogin({ email: values.email, password: values.password });
       })
-      .catch(console.error);
+      .catch(() => {
+        console.error('Произошла ошибка');
+        messageFalse(true);
+      })
   }
 
-  function handleLogin(values) {
-    MainApi.authorization(values)
+  function handleLogin(values, messageFalse) {
+    return MainApi.authorization(values)
       .then(data => {
         if (data['token']) {
           localStorage.setItem('token', data['token']);
@@ -73,7 +83,7 @@ function App() {
             MainApi.getSavedMovies()
               .then((res) => {
                 setSavedMovies(res);
-                localStorage.setItem('savedMovies', JSON.stringify(res));
+                localStorage.setItem(STORAGE_SAVED_MOVIES, JSON.stringify(res));
               })
               .catch(console.error);
           }
@@ -81,7 +91,10 @@ function App() {
           navigate('/movies', { replace: true });
         }
       })
-      .catch(console.error);
+      .catch(() => {
+        console.error('Произошла ошибка');
+        messageFalse(true);
+      })
   }
 
   function handleLogout() {
@@ -90,21 +103,30 @@ function App() {
     window.location.reload();
   }
 
-  function handleProfileFormSubmit(inputValues) {
-    return MainApi.setUserInfo(inputValues)
-      .then(setCurrentUser);
+  function handleProfileFormSubmit(inputValues, messageFalse) {
+    return MainApi.setUserInfo(inputValues).then((userData) => {
+      setCurrentUser({
+        name: userData.name,
+        email: userData.email,
+      });
+    })
+      .catch(() => {
+        console.error('Такой email в базе уже есть');
+        messageFalse(false);
+      })
+
   }
 
   function handleSearchFormSubmit(searchQuery) {
     setSearchQuery(searchQuery);
-    localStorage.setItem('searchQuery', searchQuery);
+    localStorage.setItem(STORAGE_SEARCH_QUERY, searchQuery);
   }
 
   function handleShortFilmCheckboxChange(event) {
     const checkedState = event.target.checked;
 
     setIsShortFilm(checkedState);
-    localStorage.setItem('isShort', checkedState);
+    localStorage.setItem(STORAGE_IS_SHORT_FILM, checkedState);
   }
 
   function filterMovies(rawMovies) {
@@ -113,7 +135,7 @@ function App() {
         item.nameRU.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.nameEN.toLowerCase().includes(searchQuery.toLowerCase());
 
-      return isShortFilm ? item.duration <= 40 && includesQuery : includesQuery;
+      return isShortFilm ? item.duration <= MOVIE_TIMING && includesQuery : includesQuery;
     });
   }
 
@@ -145,11 +167,10 @@ function App() {
     } else {
       console.error('Фильм не найден');
     }
-    console.log(movie);
   }
 
   React.useEffect(() => {
-    localStorage.setItem('savedMovies', JSON.stringify(addedMovies));
+    localStorage.setItem(STORAGE_SAVED_MOVIES, JSON.stringify(addedMovies));
   }, [addedMovies]);
 
   return (
@@ -164,7 +185,7 @@ function App() {
             addedMovies={addedMovies}
             filterMovies={filterMovies}
             searchQuery={searchQuery}
-            ShortFilm={isShortFilm}
+            isShortFilm={isShortFilm}
             onSearchFormSubmit={handleSearchFormSubmit}
             onCardButtonClick={handleLikeButtonClick}
           />

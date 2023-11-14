@@ -1,5 +1,4 @@
-const BACKEND_BITFILMSDB_URL_API = 'https://polezhaevr.bitfilmsdb.nomoredomainsrocks.ru';
-
+import { BACKEND_BITFILMSDB_URL_API } from './constants.js';
 
 function _checkResponse(res) {
   if (res.ok) {
@@ -66,12 +65,7 @@ function getRequest(urlPath) {
       authorization: `Bearer ${localStorage.getItem('token')}`
     }
   })
-    .then(res => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
-    })
+    .then(_checkResponse)
     .catch(console.error);
 }
 
@@ -92,12 +86,7 @@ function setRequestBody(urlPath, requestMethod, requestBody) {
     },
     body: JSON.stringify(requestBody)
   })
-    .then(res => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
-    })
+  .then(_checkResponse)
     .catch(console.error);
 }
 
@@ -124,4 +113,4 @@ function addLikedMovie(movieInfo) {
   });
 }
 
-export {removeMovie, verificationToken, registration, authorization, getUserInfo, setUserInfo, getSavedMovies, addLikedMovie };
+export { removeMovie, verificationToken, registration, authorization, getUserInfo, setUserInfo, getSavedMovies, addLikedMovie };
