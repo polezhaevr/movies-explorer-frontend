@@ -1,4 +1,4 @@
-const BACKEND_BITFILMSDB_URL_API = 'http://localhost:3000';
+const BACKEND_BITFILMSDB_URL_API = 'https://polezhaevr.bitfilmsdb.nomoredomainsrocks.ru';
 
 const MOVIE_TIMING = 40;
 
