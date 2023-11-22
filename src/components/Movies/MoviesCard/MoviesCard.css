@@ -55,21 +55,13 @@
     border-radius: 50px;
 }
 
-.movies__card-btn:active {
-    background-color: #2BE080;
+.movies__card-btn_active_none {
+    background-color: #313131;
 }
 
-
-/* активное состояние кнопки при добавлении фильма*/
-/*.movies__card-btn_active {
+.movies__card-btn_active {
     background-color: #2BE080;
-    cursor: pointer;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #FFFF;
-    border-radius: 50px;
 }
-*/
 
 .movies__card-btn_delete {
     background-color: #222222;
@@ -84,18 +76,16 @@
 
 .movies__card-btn_delete:hover {
     opacity: 0.7;
-} 
-
+}
 
 @media screen and (max-width: 1275px) {
     .movies__img {
         height: 190px;
     }
-  }
-  
-  @media screen and (max-width: 560px) {
+}
+
+@media screen and (max-width: 560px) {
     .movies__img {
         height: 168px;
     }
-  }
-
+}

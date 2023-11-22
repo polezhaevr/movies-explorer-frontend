@@ -4,6 +4,7 @@
     padding-top: 70px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .profile__welcome-text {
@@ -27,6 +28,10 @@
 .profile__form-wrapper {
     border: 0;
     padding-left: 0;
+}
+
+.profile__form-wrapper:disabled {
+    opacity: 0.7
 }
 
 .profile__input-name-wrapper {
@@ -83,7 +88,7 @@
 
 .profile__btn-save:hover {
     opacity: 0.7;
-} 
+}
 
 .profile__logout {
     color: #EE3465;
@@ -99,6 +104,21 @@
 }
 
 .profile__logout:hover {
+    opacity: 0.7;
+}
+
+.profile__input-error,
+.profile__ok-message  {
+    color: #EE3465;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+
+.profile__btn-save:disabled {
     opacity: 0.7;
 }
 
@@ -145,4 +165,7 @@
         font-size: 12px;
     }
 
+    .profile__input-error {
+        width: 250px;
+    }
 }

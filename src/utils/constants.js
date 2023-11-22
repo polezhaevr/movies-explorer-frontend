@@ -1,0 +1,34 @@
+const BACKEND_BITFILMSDB_URL_API = 'https://polezhaevr.bitfilmsdb.nomoredomainsrocks.ru';
+
+const MOVIE_TIMING = 40;
+
+const PC_WIDTH = 1280;
+const TABLET_WIDTH = 768;
+const PC_CARD = 16;
+const TABLET_CARD = 8;
+const MOBILE_CARD = 5;
+const PC_COUNT_CARD_MORE = 16;
+const TABLET_COUNT_CARD = 8;
+const MOBILE_COUNT_CARD = 5;
+
+const STORAGE_SAVED_MOVIES = 'savedMovies';
+const STORAGE_SEARCH_QUERY = 'searchQuery';
+const STORAGE_IS_SHORT_FILM = 'isShort';
+const STORAGE_RAW_MOVIES = 'rawMovies';
+
+export {
+    BACKEND_BITFILMSDB_URL_API,
+    MOVIE_TIMING,
+    PC_WIDTH,
+    TABLET_WIDTH,
+    PC_CARD,
+    TABLET_CARD,
+    MOBILE_CARD,
+    PC_COUNT_CARD_MORE,
+    TABLET_COUNT_CARD,
+    MOBILE_COUNT_CARD,
+    STORAGE_SAVED_MOVIES,
+    STORAGE_SEARCH_QUERY,
+    STORAGE_IS_SHORT_FILM,
+    STORAGE_RAW_MOVIES
+}

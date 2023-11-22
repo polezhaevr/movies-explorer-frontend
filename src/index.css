@@ -23,7 +23,8 @@
 
 @import url(./components/NotFound/NotFound.css);
 
-
 @import url(./components/Footer/Footer.css);
+
+@import url(./components/Preloader/Preloader.css);
 
 
